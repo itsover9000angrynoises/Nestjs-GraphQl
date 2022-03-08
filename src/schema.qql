@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type edge {
+  id: Int!
+  created_at: String!
+  updated_at: String!
+  capacity: Int!
+  node1_alias: String!
+  node2_alias: String!
+}
+
+type Query {
+  getEdges: [edge!]!
+  getEdge(edgeId: Int!): edge!
+}
+
+type Mutation {
+  createEdge(edgeData: edgeData!): edge!
+}
+
+input edgeData {
+  node1_alias: String!
+  node2_alias: String!
+}
